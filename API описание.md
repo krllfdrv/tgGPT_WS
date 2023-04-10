@@ -4,8 +4,6 @@
 
 <h3>Отправка вопроса:</h3>
 
-bash
-
 POST /questions HTTP/1.1
 Host: example.com
 Content-Type: application/json
@@ -15,14 +13,11 @@ Content-Type: application/json
 }
 <h3>Получение ответа на вопрос:</h3>
 
-perl
-
 GET /answers?question=Какие%20достопримечательности%20Парижа%3F HTTP/1.1
 Host: example.com
 
 <h3>Добавление новых тренировочных данных:</h3>
-bash
-Copy code
+
 POST /training-data HTTP/1.1
 Host: example.com
 Content-Type: application/json
@@ -31,19 +26,19 @@ Content-Type: application/json
     "question": "Какие достопримечательности Барселоны?",
     "answer": "Саграда Фамилия, Парк Гюэль, Ла Рамбла"
 }
+
 <h3>Получение всех тренировочных данных:</h3>
-vbnet
-Copy code
+
 GET /training-data HTTP/1.1
 Host: example.com
+
 <h3>Получение конкретного тренировочного примера:</h3>
-vbnet
-Copy code
+
 GET /training-data/1 HTTP/1.1
 Host: example.com
+
 <h3>Обновление тренировочного примера:</h3>
-bash
-Copy code
+
 PUT /training-data/1 HTTP/1.1
 Host: example.com
 Content-Type: application/json
@@ -52,36 +47,37 @@ Content-Type: application/json
     "question": "Какие достопримечательности Парижа?",
     "answer": "Эйфелева башня, Лувр, Нотр-Дам де Пари"
 }
+
 <h3>Удаление тренировочного примера:</h3>
-bash
-Copy code
+
 DELETE /training-data/1 HTTP/1.1
 Host: example.com
+
 <h3>Заголовки</h3>
 
 Content-Type: указывает формат тела запроса или ответа.
 Authorization: содержит токен доступа для аутентификации запросов.
-<h2>Форматы данных</h2>
 
+<h2>Форматы данных</h2>
 <h3>Вопросы и ответы хранятся в формате JSON:</h3>
-json
-Copy code
+
 {
     "question": "Какие достопримечательности Парижа?",
     "answer": "Эйфелева башня, Лувр, Нотр-Дам де Пари"
 }
+
 <h3>Ответ на вопрос также представляется в формате JSON:</h3>
-json
-Copy code
+
 {
     "answer": "Эйфелева башня, Лувр, Нотр-Дам де Пари"
 }
+
 <h3>Ошибки представлены в формате JSON:</h3>
-json
-Copy code
+
 {
     "error": "Не удалось обработать запрос."
 }
+
 <h3>Коды ответов</h3>
 
 200 OK: запрос успешно обработан, ответ на вопрос возвращен.
