@@ -1,9 +1,9 @@
-//Базовый URL: https://example.com/api/
+Базовый URL: https://example.com/api/
 
 Методы
 
 Отправка вопроса:
-bash//
+bash
 
 POST /questions HTTP/1.1
 Host: example.com
