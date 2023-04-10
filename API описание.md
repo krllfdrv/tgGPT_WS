@@ -3,15 +3,16 @@
 <h2>Методы</h2>
 
 <h3>Отправка вопроса:</h3>  
-`
-POST /questions HTTP/1.1  
-Host: example.com  
-Content-Type: application/json  
+```
+POST /questions HTTP/1.1
+Host: example.com
+Content-Type: application/json
 
 {
-    "question": "Какие достопримечательности Парижа?"  
+    "question": "Какие достопримечательности Парижа?"
 }
-`
+
+```
 <h3>Получение ответа на вопрос:</h3>  
 
 GET /answers?question=Какие%20достопримечательности%20Парижа%3F HTTP/1.1  
